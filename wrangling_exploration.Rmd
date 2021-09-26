@@ -1,0 +1,42 @@
+---
+title: "wrangling_exploration"
+author: "Katherine Piatti"
+date: "9/17/2021"
+output: html_document
+---
+```{r}
+#load packages
+library(tidyverse)
+library(here)
+library(janitor)
+library(dplyr)
+library(lubridate)
+```
+```{r}
+#read in data
+covid_all <- read.csv("owid-covid-data_9172021.csv")
+```
+
+```{r}
+#look at sample of 10 rows
+covid_all %>%  sample(10)
+```
+
+```{r}
+#get dataset dimensions
+covid_all %>% 
+  dim()
+```
+```{r}
+#get var names and dtypes
+covid_all %>% 
+  glimpse()
+```
+
+```{r}
+#covert dates var to date type
+covid_all %>% 
+  as.Date(date)
+```
+
+
